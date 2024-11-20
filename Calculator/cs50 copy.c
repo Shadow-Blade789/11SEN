@@ -155,6 +155,7 @@ string get_string(va_list *args, const char *format, ...)
 
         // Append current character to buffer
         buffer[size++] = c;
+        
     }
 
     // Check whether user provided no input
