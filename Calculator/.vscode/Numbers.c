@@ -23,7 +23,7 @@ void odd_even(int x)
     }
     else
     {
-        printf("Number is not even\n");
+        printf("Number is odd\n");
     }
 }
 
