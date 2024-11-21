@@ -2,10 +2,12 @@
 #include <cs50.h>
 
 int prime_return = 0;
+int square_num = 0;
 
 void odd_even(int x); //defining the functions in advance
 void prime(int x);
 void square(int x);
+void timestables(int x);
 
 int main(void)
 {
@@ -13,6 +15,7 @@ int main(void)
     odd_even(x); //calling the functions
     prime(x);
     square(x);
+    timestables(x);
 }
 
 void odd_even(int x)
@@ -52,12 +55,20 @@ void square(int x)
     {
         if (x / i == i) //if x divided by i is i, it is a square
         {
-            printf("The number is a square number\n");
+            int square_num = 1;
         }
         else 
         {
-            printf("The number is not a square number\n");
+            int square_num = 0;
         }
+    }
+    if(square_num == 1)
+    {
+        printf("The number is a square number\n");
+    }
+    else
+    {
+        printf("The number is not a square number\n");
     }
 }
 
@@ -65,6 +76,6 @@ void timestables(int x)
 {
     for (int z = 1; z < 13; z++) //setting the value multiplying by
     {
-        printf("%d", x); printf(" * %d", z); printf(" = %d", x * z); //stating the x times z equals ...
+        printf("%d", x); printf(" * %d", z); printf(" = %d", x * z); printf("\n"); //stating the x times z equals ...
     }
 }
