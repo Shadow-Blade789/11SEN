@@ -2,7 +2,7 @@
 #include <cs50.h>
 
 int prime_return = 0;
-int square_num = 0;
+int square_num = -1;
 
 void odd_even(int x); //defining the functions in advance
 void prime(int x);
@@ -53,22 +53,27 @@ void square(int x)
 {
     for (int i = 1; i <= x; i++) //setting the value to divide
     {
-        if (x / i == i) //if x divided by i is i, it is a square
+        if ((x / i) == i) //if x divided by i is i, it is a square
         {
-            int square_num = 1;
+            square_num = 1;
+            break;
         }
         else 
         {
-            int square_num = 0;
+            square_num = 0;
         }
     }
     if(square_num == 1)
     {
         printf("The number is a square number\n");
     }
-    else
+    else if(square_num == 0)
     {
         printf("The number is not a square number\n");
+    }
+    else
+    {
+        printf("vghjdbkaklhfuibkgcefyak\n");
     }
 }
 
