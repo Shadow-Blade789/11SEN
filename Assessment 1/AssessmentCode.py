@@ -25,12 +25,14 @@ def money_buckets():
 
  
 def compound_interest():
-     while age < 61:
-         counter = 1
-         amount = investment
-         amount = investment * (1 + rate/100)
-         print(str(amount))
-         age = age + counter
+    print("Age | Investment")
+    while age < 61:
+        counter = 1
+        amount = investment
+        amount = investment * (1 + rate/100)
+        age = age + counter
+        print(f"{str(age)} | {str(round(amount, 3))}")
+         
  
  
 print("What can I help you with?")
