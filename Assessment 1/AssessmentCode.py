@@ -37,7 +37,7 @@ def compound_interest():
  
 print("What can I help you with?")
 choice = input(print("Select one, money buckets or compound interest. (m or c)"))
-
+choice_counter = 0
 while choice_counter == 0:
     if choice.lower == "m" or "money buckets" or "money_buckets":
         choice_counter = 1
