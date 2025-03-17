@@ -27,4 +27,4 @@ compound interest:
   while age is under 61
     calculate current_investment
     print current_investment
-    age = age + 1
+    Increase age by 1
