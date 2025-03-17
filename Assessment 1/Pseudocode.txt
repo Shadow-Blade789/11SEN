@@ -1,0 +1,30 @@
+Begin
+
+Get Option
+
+if option is money buckets
+  Go to money buckets
+elif option is compund interest
+  go to compound interest
+else
+  try again
+
+money buckets:
+  get income
+  Blow = income * 0.6
+  daily = income * 0.6
+  splurge = income * 0.1
+  smile = income * 0.1
+  fire = income * 0.2
+  grow = income * 0.2
+  mojo = income * 0.2
+  display all (print outcomes)
+
+compound interest:
+  get age
+  get return
+  get investment
+  while age is under 61
+    calculate current_investment
+    print current_investment
+    age = age + 1
