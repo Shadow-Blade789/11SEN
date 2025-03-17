@@ -22,15 +22,16 @@ def money_buckets():
     print(row_format.format(*amounts))
 
  
-def compound_interest(age):
+def compound_interest(age, investment):
     print("Age | Investment")
     amount = 0
-    print(f"{str(age)} | {str(investment)}")
-    while age < 61:
+    print(f"{str(age)}  | {str(investment)}")
+    while age < 60:
         counter = 1
         amount = investment * (1 + rate/100)
         age = age + counter
-        print(f"{str(age)} | {str(round(amount, 2))}")
+        print(f"{str(age)}  | {str(round(amount, 2))}")
+        investment = amount
          
  
 age = 0
@@ -46,7 +47,7 @@ elif "ci" == choice.lower():
     age = int(input("How old are you currently? "))
     rate = float(input("What is the return rate, in a percentage. "))
     investment = int(input("How much are you investing per year? "))
-    compound_interest(age)
+    compound_interest(age, investment)
 else:
     print("Didn't quite catch that.")
     choice = input("What can I help you with?")
