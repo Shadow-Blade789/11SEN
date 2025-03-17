@@ -22,30 +22,31 @@ def money_buckets():
     print(row_format.format(*amounts))
 
  
-def compound_interest():
+def compound_interest(age):
     print("Age | Investment")
+    amount = 0
+    print(f"{str(age)} | {str(investment)}")
     while age < 61:
         counter = 1
-        amount = investment
         amount = investment * (1 + rate/100)
         age = age + counter
-        print(f"{str(age)} | {str(round(amount, 3))}")
+        print(f"{str(age)} | {str(round(amount, 2))}")
          
  
- 
+age = 0
 print("What can I help you with?")
-choice = input("Select one, money buckets or compound interest. (m or c). ")
-if "m" or "money buckets" or "money_buckets" in choice.lower():
+choice = input("Select one, money buckets or compound interest. (mb or ci). ")
+if "mb" == choice.lower():
     income = int(input("What is your income? $"))
     while len(str(income)) > 10:
         print("You don't earn that much money!")
         income = int(input("What is your income? "))
     money_buckets()
-elif "c" or "compound" or "compound interest" or "compound_interest" in choice.lower():
-    age = int(input("How old are you currently?"))
-    rate = int(round(input("What is the return rate, in a percentage."), 0))
-    investment = int(input("How much are you investing per year?"))
-    compound_interest()
+elif "ci" == choice.lower():
+    age = int(input("How old are you currently? "))
+    rate = float(input("What is the return rate, in a percentage. "))
+    investment = int(input("How much are you investing per year? "))
+    compound_interest(age)
 else:
     print("Didn't quite catch that.")
     choice = input("What can I help you with?")
