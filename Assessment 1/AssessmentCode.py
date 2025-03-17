@@ -34,22 +34,18 @@ def compound_interest():
  
  
 print("What can I help you with?")
-choice = input(print("Select one, money buckets or compound interest. (m or c). "))
-choice_counter = 0
-while choice_counter == 0:
-    if choice.lower() == "m" or "money buckets" or "money_buckets":
-        choice_counter = 1
-        income = int(input("What is your income? $"))
-        while len(str(income)) > 10:
-            print("You don't earn that much money!")
-            income = int(input("What is your income? "))
-        money_buckets()
-    elif choice.lower() == "c" or "compound" or "compound interest" or "compound_interest":
-        choice_counter = 1
-        age = int(input("How old are you currently?"))
-        rate = int(round(input("What is the return rate, in a percentage."), 0))
-        investment = int(input("How much are you investing per year?"))
-    else:
-        choice_counter = 0
-        print("Didn't quite catch that.")
-        choice = input("What can I help you with?")
+choice = input("Select one, money buckets or compound interest. (m or c). ")
+if "m" or "money buckets" or "money_buckets" in choice.lower():
+    income = int(input("What is your income? $"))
+    while len(str(income)) > 10:
+        print("You don't earn that much money!")
+        income = int(input("What is your income? "))
+    money_buckets()
+elif "c" or "compound" or "compound interest" or "compound_interest" in choice.lower():
+    age = int(input("How old are you currently?"))
+    rate = int(round(input("What is the return rate, in a percentage."), 0))
+    investment = int(input("How much are you investing per year?"))
+    compound_interest()
+else:
+    print("Didn't quite catch that.")
+    choice = input("What can I help you with?")
