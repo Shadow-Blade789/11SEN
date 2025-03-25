@@ -30,7 +30,7 @@ def compound_interest(age, investment):
         counter = 1
         amount = investment * (1 + rate/100)
         age = age + counter
-        print(f"-----------------\n{str(age)}  | {str(round(amount, 2))}")
+        print(f"-----------------\n{str(age)}  | ${str(round(amount, 2))}")
         investment = amount
     print("-----------------")
          
