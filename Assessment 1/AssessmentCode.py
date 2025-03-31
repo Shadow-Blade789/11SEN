@@ -8,20 +8,17 @@ def money_buckets():
     mojo = income * 0.6
     headers = ["Blow", "Daily Expense", "Splurge", "Smile", "Fire Extinguisher", "Grow", "Mojo"]
     amounts = [f"${round(blow, 3)}", f"${round(d_expense, 3)}", f"${round(splurge, 3)}", f"${round(smile, 3)}", f"${round(extinguisher, 3)}", f"${round(grow, 3)}", f"${round(mojo, 3)}"]
+    c = 0
+    print("\n\nBucket | Amount\n---------------------------------")
+    for h in headers:
+        space = (19 - len(headers[c])) * " "
+        space2 = (12 - len(amounts[c])) * " "
+        print(f"{h}{space}| {amounts[c]}{space2}")
+        print("---------------------------------")
+        c = c + 1
+    
 
-    if len(str(income)) <= 4:
-        row_format = "{:<22}" * len(headers)
-    elif len(str(income)) <= 6:
-        row_format = "{:<20}" * len(headers)
-    elif len(str(income)) <= 8:
-        row_format = "{:<19}" * len(headers)
-    else:
-        row_format = "{:<18}" * len(headers)
-        
-    print(row_format.format(*headers))
-    print(row_format.format(*amounts))
 
- 
 def compound_interest(age, investment):
     print("-----------------\nAge | Investment\n-----------------")
     amount = 0
