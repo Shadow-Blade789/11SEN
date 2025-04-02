@@ -43,6 +43,9 @@ if "mb" == choice.lower():
     money_buckets()
 elif "ci" == choice.lower():
     age = int(input("How old are you currently? "))
+    while age > 60:
+        print("Unfortunately, it is a bit late to start now, but educate someone else so they do not miss the opportunity.")
+        age = int(input("How old are you currently?"))
     rate = float(input("What is the return rate, in a percentage. "))
     investment = int(input("How much are you investing per year? "))
     compound_interest(age, investment)
