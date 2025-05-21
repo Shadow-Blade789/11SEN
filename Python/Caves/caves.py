@@ -12,7 +12,10 @@ class Cave:
             print(description)
         
 cavetest = Cave("Centre", "Cavern")
-
+northcave = Cave("North", "Rock Wall")
+southcave = Cave("South", "Rocky")
+eastcave = Cave("East", "d")
+westcave = Cave("West", "d")
 
 playerpos = "Centre"
 def Q():
