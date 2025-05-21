@@ -3,14 +3,17 @@ class Cave:
         self.location = location
         self.typeofcave = typeofcave
         
-    def GetLocation():
+    def GetLocation(self):
+        self.location = playerpos
+        
+    def CaveDesc(self):
         if self.typeofcave == "Cavern":
-            self.location = "Central"
+            description = "Big"
+            print(description)
         
-    def GetType():
-        if playerpos == "n":
-            pass
-        
+cavetest = Cave("Centre", "Cavern")
+
+
 playerpos = "Centre"
 def Q():
     command = input("What Direction? ").lower()
@@ -20,6 +23,7 @@ def Q():
         #print current cave description/other stuff
     elif command == "s":
         playerpos = "South"
+        cavetest.CaveDesc()
     elif command == "e":
         playerpos = "East"
     elif command == "w":
