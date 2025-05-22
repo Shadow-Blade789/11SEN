@@ -10,4 +10,7 @@ class Cave:
         if self.typeofcave == "Cavern":
             description = "Big"
             print(description)
-   
+        elif self.typeofcave == "Rock Wall":
+        elif self.typeofcave == "Rocky":
+        elif self.typeofcave == "Dark":
+        elif self.typeofcave == "Wet":

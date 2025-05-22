@@ -5,3 +5,6 @@ class Player:
         self.playerpos = playerpos
         self.hasItem = False
         Items = []
+    
+    def updateplayerpos(self):
+        pass
