@@ -1,21 +1,9 @@
-class Cave:
-    def __init__ (self, location, typeofcave):
-        self.location = location
-        self.typeofcave = typeofcave
-        
-    def GetLocation(self):
-        self.location = playerpos
-        
-    def CaveDesc(self):
-        if self.typeofcave == "Cavern":
-            description = "Big"
-            print(description)
-        
-cavetest = Cave("Centre", "Cavern")
+from cave import Cave     
+maincave = Cave("Centre", "Cavern")
 northcave = Cave("North", "Rock Wall")
 southcave = Cave("South", "Rocky")
-eastcave = Cave("East", "d")
-westcave = Cave("West", "d")
+eastcave = Cave("East", "Dark")
+westcave = Cave("West", "Wet")
 
 playerpos = "Centre"
 def Q():
@@ -26,7 +14,6 @@ def Q():
         #print current cave description/other stuff
     elif command == "s":
         playerpos = "South"
-        cavetest.CaveDesc()
     elif command == "e":
         playerpos = "East"
     elif command == "w":
