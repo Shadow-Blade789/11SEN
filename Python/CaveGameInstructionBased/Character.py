@@ -1,3 +1,4 @@
+import random
 class Character():
     def __init__(self, char_name, char_description):
         self.name = char_name
@@ -26,4 +27,17 @@ class Character():
         return True
 # Add your code here (first line unindented)
 class Enemy(Character):
-    pass
+    def __init__ (self, char_name, char_description):
+        super().__init__(char_name, char_description)
+        self.weakness = None
+    def GetWeakness(self):
+        return self.weakness
+    def SetWeakness(self):
+        weaknesses = [
+            "Banana", "Smashed Ostrich", "Apple Magic Mouse", "Effective Literary Devices", "Loud Noises",
+            "Garlic", "Silver Gliyter", "Purple Light", "Condensed Water", "Electricity",
+            "Spiders", "Maths", "Jazz Music", "Tofu", "Chalk",
+            "Kittens", "Paper Cuts", "Clowns", "Salt", "Wind",
+            "Bubble Wrap", "Gluten", "Lasers", "Velcro", "Magnets"
+        ]
+        self.weakness = random.choice(weaknesses)
