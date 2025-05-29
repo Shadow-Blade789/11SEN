@@ -41,3 +41,10 @@ class Enemy(Character):
             "Bubble Wrap", "Gluten", "Lasers", "Velcro", "Magnets"
         ]
         self.weakness = random.choice(weaknesses)
+    def fight(self, combat_item):
+        if combat_item == self.weakness:
+            print("You fend " + self.name + " off with the " + combat_item )
+            return True
+        else:
+            print(self.name + " swallows you, little wimp")
+            return False
