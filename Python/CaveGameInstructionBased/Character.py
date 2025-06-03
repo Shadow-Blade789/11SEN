@@ -35,7 +35,7 @@ class Enemy(Character):
     def SetWeakness(self):
         weaknesses = [
             "Banana", "Smashed Ostrich", "Apple Magic Mouse", "Effective Literary Devices", "Loud Noises",
-            "Garlic", "Silver Gliyter", "Purple Light", "Condensed Water", "Electricity",
+            "Garlic", "Silver Glitter", "Purple Light", "Condensed Water", "Electricity",
             "Spiders", "Maths", "Jazz Music", "Tofu", "Chalk",
             "Kittens", "Paper Cuts", "Clowns", "Salt", "Wind",
             "Bubble Wrap", "Gluten", "Lasers", "Velcro", "Magnets"
