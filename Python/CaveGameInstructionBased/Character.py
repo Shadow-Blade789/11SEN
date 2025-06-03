@@ -21,10 +21,6 @@ class Character():
     def fight(self, combat_item):
         print(self.name + " doesn't want to fight with you")
         return True
-        # Fight with this character
-    def fight(self, combat_item):
-        print(self.name + " doesn't want to fight with you")
-        return True
 # Add your code here (first line unindented)
 class Enemy(Character):
     def __init__ (self, char_name, char_description):
