@@ -11,7 +11,6 @@ grotto = Cave("Grotto")
 grotto.set_description("A small cave with ancient graffiti")
 harry = Enemy("Harry", "A smelly Wumpus")
 harry.set_conversation("Hangry…Hanggrry")
-harry.SetWeakness()
 
 
 cavern.link_cave(dungeon, "east")
@@ -45,20 +44,23 @@ while dead == False:
     elif command.lower() == "talk":
      #Talk to the inhabitant - check whether there is one!
         if inhabitant is not None:
-            harry.talk()
+            inhabitant.talk()
         else:
             print("Talking to oneself is the root of insanity.")
     elif command.lower() == "fight":
         if inhabitant == 'Harry':
             # Fight with the inhabitant, if there is one
+            print(harry.GetWeakness())
             print("What will you fight with?")
-            fight_with = input().lower()
-            if harry.fight(fight_with) == True:
+            combat_item = input().lower()
+            if harry.fight(combat_item) == True:
                 # What happens if you win?
                 print("Bravo,hero you won the fight!")
-                current_cave.set_character(None)
+                current_cave.SetCharacter(None)
             else:
                 print("Scurry home, you lost the fight.")
                 dead = True
         else:
             print("There is no one here to fight with, you punch yourself.")
+    elif command.lower() == "exit":
+        dead = True
